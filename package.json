@@ -17,14 +17,12 @@
 	"bugs": {
 		"url": "https://github.com/sergiodxa/package/issues"
 	},
-	"bin": {
-		"exports": "./scripts/exports.ts"
-	},
 	"scripts": {
 		"build": "tsc",
 		"typecheck": "tsc --noEmit",
-		"check": "biome check .",
-		"check:apply": "biome check . --apply-unsafe"
+		"quality": "biome check .",
+		"quality:fix": "biome check . --apply-unsafe",
+		"exports": "bun run ./scripts/exports.ts"
 	},
 	"sideEffects": false,
 	"type": "module",
@@ -33,6 +31,7 @@
 	},
 	"files": ["build", "package.json", "README.md"],
 	"exports": {
+		".": "./build/index.js",
 		"./package.json": "./package.json"
 	},
 	"dependencies": {},
@@ -41,7 +40,6 @@
 		"@arethetypeswrong/cli": "^0.15.3",
 		"@biomejs/biome": "^1.7.2",
 		"@types/bun": "^1.1.1",
-		"citty": "^0.1.6",
 		"consola": "^3.2.3",
 		"typedoc": "^0.25.13",
 		"typedoc-plugin-mdn-links": "^3.1.23",
