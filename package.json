@@ -21,7 +21,7 @@
 		"build": "tsc",
 		"typecheck": "tsc --noEmit",
 		"quality": "biome check .",
-		"quality:fix": "biome check . --apply-unsafe",
+		"quality:fix": "biome check . --write --unsafe",
 		"exports": "bun run ./scripts/exports.ts"
 	},
 	"sideEffects": false,
@@ -38,12 +38,12 @@
 	"peerDependencies": {},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.15.3",
-		"@biomejs/biome": "^1.7.2",
+		"@biomejs/biome": "^1.8.3",
 		"@total-typescript/tsconfig": "^1.0.4",
-		"@types/bun": "^1.1.1",
+		"@types/bun": "^1.1.6",
 		"consola": "^3.2.3",
-		"typedoc": "^0.25.13",
-		"typedoc-plugin-mdn-links": "^3.1.23",
-		"typescript": "^5.4.5"
+		"typedoc": "^0.26.5",
+		"typedoc-plugin-mdn-links": "^3.2.6",
+		"typescript": "^5.5.4"
 	}
 }
